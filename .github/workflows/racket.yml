@@ -26,10 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install Racket
-        uses: Bogdanp/setup-racket@v0.11
-        with:
-          architecture: 'x64'
-          distribution: 'full'
-          version: '7.9'
+        run: sudo apt-get install racket
       - name: Run Tests
         run: raco test .
